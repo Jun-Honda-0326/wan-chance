@@ -1,11 +1,12 @@
 *{
   list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .header{
   width: 100%;
   height: 90px;
-  background-color:lightgray;
   color: #666;
   letter-spacing: 0.12rem;
   display: flex;
@@ -13,6 +14,7 @@
   align-items: center;
   line-height: 90px;
   position: fixed;
+  border-bottom: 0.8px solid;
   &__logo{
     margin-left: 150px;
     font-size: 30px;
@@ -32,6 +34,30 @@
       border-radius: 10px;
       border: 1px solid;
       padding: 0 5px;
+    }
+  }
+}
+
+.contents{
+  width: 100%;
+  height: calc(100vh - 90px);
+  position: absolute;
+  bottom: 0px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  .content{
+    width: 600px;
+    height: 500px;
+    border: 1px solid;
+    margin: 50px 50px 0px 50px;
+    .img-box{
+      height: 300px;
+    .text-box{
+      height: 200px;
+    }
     }
   }
 }
