@@ -6,7 +6,7 @@
 
 .header{
   width: 100%;
-  height: 90px;
+  height: 70px;
   color: #666;
   letter-spacing: 0.12rem;
   display: flex;
@@ -40,10 +40,10 @@
 
 .contents{
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
+  background-color: whitesmoke;
   position: absolute;
   bottom: 0px;
-  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
