@@ -10,17 +10,18 @@
   %body
     .header
       .header__logo
-        Wan-Chance
+        = link_to 'Wan-Chance', root_path
       .header__user-nav
         %p.name
           JUN
         %ul
+          %li.post<>
+            = link_to '投稿する', new_post_path
           %li.login<>
             ログイン
           %li.logout<>
             ログアウト
-          %li.post<>
-            投稿する
+          
     
 
 
