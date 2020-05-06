@@ -1,15 +1,16 @@
+-# .about
 .contents
   - @posts.each do |post|
     .content
       .img-box  
-        = image_tag post.image.url
+        = link_to(image_tag post.image.url, size:'598x405')
       .text-box<>
         .text
-          = post.text
+          = simple_format(post.text)
         .user-info
           .user-name
             投稿者：
           .post-time
-            投稿時間：
+            投稿：
             = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
-    
+      
