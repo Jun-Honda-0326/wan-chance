@@ -1,25 +1,14 @@
 .contents
-  .content
-    .img-box
-    .text-box
-  
-  .content
-    .img-box
-    .text-box
-  .content
-    .img-box
-    .text-box
-  .content
-    .img-box
-    .text-box
-  .content
-    .img-box
-    .text-box
-  .content
-    .img-box
-    .text-box
-  .content
-    .img-box
-    .text-box
-  
-  
+  - @posts.each do |post|
+    .content
+      .img-box  
+      .text-box<>
+        .text
+          = post.text
+        .user-info
+          .user-name
+            投稿者：
+          .post-time
+            投稿時間：
+            = post.created_at
+    

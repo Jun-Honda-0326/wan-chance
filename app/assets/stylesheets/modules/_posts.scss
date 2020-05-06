@@ -52,12 +52,32 @@
     width: 600px;
     height: 500px;
     border: 1px solid;
-    margin: 50px 50px 0px 50px;
+    margin: 50px;
     .img-box{
-      height: 300px;
+      height: 350px;
+      width: 600px;
+      border: 1px solid;
+    }
     .text-box{
-      height: 200px;
-    }
-    }
+      height: 150px;
+      width: 600px;
+      border: 1px solid;
+      .text{
+        width: 600px;
+        height: 100px;
+      }
+      .user-info{
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 50px;
+        .user-name{
+          margin-left: 10px;
+        }
+        .post-time{
+          margin-right: 20px;
+        }
+      }
+   }
   }
 }
