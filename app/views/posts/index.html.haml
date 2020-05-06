@@ -2,6 +2,7 @@
   - @posts.each do |post|
     .content
       .img-box  
+        = image_tag post.image.url
       .text-box<>
         .text
           = post.text
@@ -10,5 +11,5 @@
             投稿者：
           .post-time
             投稿時間：
-            = post.created_at
+            = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
     

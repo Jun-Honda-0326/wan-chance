@@ -1,0 +1,9 @@
+.contents
+  .form
+    = form_with model:@post do |f|
+      = f.text_field :text, class: 'form__text', placeholder: '投稿に対するメッセージを添えてください'
+      .form__mask
+        = f.label :image, class: 'form__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
