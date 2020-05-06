@@ -8,4 +8,20 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .header
+      .header__logo
+        Wan-Chance
+      .header__user-nav
+        %p.name
+          JUN
+        %ul
+          %li.login<>
+            ログイン
+          %li.logout<>
+            ログアウト
+          %li.post<>
+            投稿する
+    
+
+
     = yield
