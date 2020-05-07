@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:text, :image)
+    params.require(:post).permit(:text, :image,).merge(user_id: current_user.id)
   end
 
   def move_to_index

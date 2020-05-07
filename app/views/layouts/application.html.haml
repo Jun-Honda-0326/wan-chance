@@ -14,7 +14,7 @@
       .header__user-nav
         - if user_signed_in?
           %p.name
-            JUN
+            = current_user.name
           %ul
             %li
               = link_to '投稿する', new_post_path
