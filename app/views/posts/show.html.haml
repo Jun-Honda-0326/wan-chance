@@ -12,6 +12,15 @@
           投稿：
           = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
     
-  .comment
-    .comment-form
-      .comment__box
+  .comment-box
+    - if current_user
+      = form_with model: [@post, @comment] do |f|
+        = f.text_area :text, placeholder: 'この投稿にコメントする'
+        = f.submit 'コメント'
+    - else
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+
+    .comment   
+      - if @comments
+        - @comments.each do |comment|
+          = comment.text

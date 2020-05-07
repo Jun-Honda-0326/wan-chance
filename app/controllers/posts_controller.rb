@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index 
-    @posts = Post.all.order("created_at DESC")
+    @posts = Post.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -16,9 +16,11 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
 
-  
+
   private
   def post_params
     params.require(:post).permit(:text, :image,).merge(user_id: current_user.id)
