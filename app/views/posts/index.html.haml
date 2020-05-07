@@ -2,7 +2,8 @@
   - @posts.each do |post|
     .content
       .img-box  
-        = link_to(image_tag post.image.url, size:'599x405')
+        = link_to post_path(post) do
+          = image_tag post.image.url, size:'599x405'
       .text-box<>
         .text
           = simple_format(post.text)

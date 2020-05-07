@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index]
+  before_action :move_to_index, except: [:index, :show]
 
   def index 
     @posts = Post.all.order("created_at DESC")
@@ -13,7 +13,12 @@ class PostsController < ApplicationController
     Post.create(post_params)
     redirect_to root_path
   end
+  
+  def show
+    @post = Post.find(params[:id])
+  end
 
+  
   private
   def post_params
     params.require(:post).permit(:text, :image,).merge(user_id: current_user.id)
