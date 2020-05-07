@@ -1,0 +1,40 @@
+.comment-box{
+  width: 600px;
+  background-color: white;
+  margin-bottom: 60px;
+  form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  #comment_text{
+    width: 450px;
+    height: 60px;
+    border-radius: 6px;
+    color: #666;
+  }
+  .btn{
+    width: 400px;
+    height: 50px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: turquoise;
+    color: white;
+  }
+  .comments{
+    margin:20px;
+    .comment{
+      width: 100%;
+      height: 30px;
+      margin-top: 10px;
+      display: flex;
+      &__name{
+        margin-right: 10px;
+      }
+    }
+  }
+}
