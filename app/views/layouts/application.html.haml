@@ -12,17 +12,18 @@
       .header__logo
         = link_to 'Wan-Chance', root_path
       .header__user-nav
-        %p.name
-          JUN
-        %ul
-          %li.post<>
-            = link_to '投稿する', new_post_path
-          %li.login<>
-            ログイン
-          %li.logout<>
-            ログアウト
-          
-    
-
-
+        - if user_signed_in?
+          %p.name
+            JUN
+          %ul
+            %li
+              = link_to '投稿する', new_post_path
+            %li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete
+        - else
+          %ul
+            %li
+              = link_to 'ログイン', new_user_session_path
+            %li
+              = link_to '新規登録', new_user_registration_path
     = yield
