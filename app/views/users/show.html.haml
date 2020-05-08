@@ -1,4 +1,7 @@
 .contents
+  %p
+    = @name 
+    さんの投稿一覧
   - @posts.each do |post|
     .content
       .img-box  
@@ -14,4 +17,5 @@
           .post-time
             投稿:
             = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
-      
+        .trash-icon
+          = icon("fas fa-trash-alt", class: 'icon')
