@@ -9,18 +9,20 @@
   line-height: 90px;
   position: fixed;
   border-bottom: 0.8px solid;
+  a{
+    color: #666;
+  }
   &__logo{
     margin-left: 250px;
     font-size: 30px;
     font-weight: bold;
-    a{
-      color:#666;
-    }
+   
   }
   &__user-nav{
     display: flex;
     align-items: center;
   }
+    }
   ul{
     height: 50px;
     display: flex;
@@ -32,9 +34,6 @@
       border: 1.5px solid;
       border-color: cornflowerblue;
       padding: 0 10px;
-      a{
-        color: #666;
-      }
    }
-  }
+  
 }
