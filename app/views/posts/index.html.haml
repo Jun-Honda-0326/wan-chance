@@ -10,8 +10,9 @@
         .user-info
           .user-name
             投稿者:
-            = post.user.name
+            = link_to post.user.name, "/users/#{post.user.id}" 
           .post-time
             投稿:
             = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  = paginate(@posts)
       
