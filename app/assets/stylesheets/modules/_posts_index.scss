@@ -7,7 +7,7 @@
 .contents{
   width: 100%;
   height: calc(100vh - 65px);
-  background-color: whitesmoke;
+  background-color:#99CC66;
   position: absolute;
   bottom: 0px;
   overflow: scroll;
@@ -28,6 +28,8 @@
       height: 140px;
       width: 600px;
       border: 1px solid;
+      background-color:white;
+      color: #990033;
       .text{
         width: 400px;
         height: 80px;
