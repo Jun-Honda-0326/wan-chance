@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Wan-Chance
+    %title わん-chance
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -10,7 +10,7 @@
   %body
     .header
       .header__logo
-        = link_to 'Wan-Chance', root_path
+        = link_to 'わん-chance', root_path
       .header__user-nav
         - if user_signed_in?
           %p.name

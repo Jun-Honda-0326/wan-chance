@@ -20,6 +20,11 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+  end
+
 
   private
   def post_params
