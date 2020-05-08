@@ -1,15 +1,34 @@
 .contents
   .content
-    .img-box  
+    .img-box<>
       = image_tag @post.image.url, size:'599x405'
     .text-box<>
       .text
         = simple_format(@post.text)
       .user-info
         .user-name
-          投稿者：
+          投稿者:
+          = @post.user.name
         .post-time
-          投稿：
+          投稿日:
           = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
     
-  .comment
+  .comment-box
+    - if current_user
+      = form_with model: [@post, @comment] do |f|
+        = f.text_area :text, placeholder: 'コメントする' 
+        = f.submit 'コメント', class: 'btn'
+    - else
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+
+    .comments  
+      %h4<>
+        コメント一覧
+      - if @comments
+        - @comments.each do |comment|
+          .comment
+            .comment__name
+              = comment.user.name
+              <storng>:</strong>
+            .comment__text
+              = comment.text
