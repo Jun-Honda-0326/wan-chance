@@ -19,31 +19,23 @@
     width: 600px;
     height: 400x;
     margin: 50px;
-    border-bottom: 1px solid;
-    border-right: 1px solid;
-    border-left: 1px solid;
-    border-radius: 5px;
     .img-box{
       width: 600px;
-      height: 405px;
+      height: 415px;
     }
 
     .text-box{
       height: 140px;
       width: 600px;
+      border: 1px solid;
       .text{
         width: 400px;
-        height: 70px;
-        padding-left:5px;
+        height: 80px;
+        padding: 0 0 0 10px;
       }
       .user-info{
-        height: 20px;
-        .user-name{
-          margin-left: 10px;
-        }
-        .post-time{
-          margin: 5px 0 0 10px; 
-        }
+        margin-left: 10px;
+        
       }
     }
   }
