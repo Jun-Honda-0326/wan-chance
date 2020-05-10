@@ -34,6 +34,10 @@
 - belongs_to :post
 - belongs_to :user
 
+
+
+
+
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
