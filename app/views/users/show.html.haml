@@ -2,8 +2,15 @@
   %p
     = @name 
     さんのページ
-    .message-btn
-      = link_to  'DMを送る', '/', class: "dm-btn"
+    - unless @user.id == current_user.id
+      - if @isRoom == true
+        .p.user-show-romm 
+          = link_to '/rooms/#{@roomId}', class: 'btn'
+      - else
+        = form_for @room do |f|
+          = fields_for @entry do |e|
+            = e= f.hidden_field :user_id, value: @user.id
+          = f.submit 'DMを始める', class: 'btn'
   - @posts.each do |post|
     .content
       .img-box  
