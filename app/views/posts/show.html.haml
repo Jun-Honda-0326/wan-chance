@@ -28,7 +28,7 @@
         - @comments.each do |comment|
           .comment
             .comment__name
-              = comment.user.name
+              = link_to comment.user.name,  "/users/#{comment.user.id}"
               <storng>:</strong>
             .comment__text
               = comment.text

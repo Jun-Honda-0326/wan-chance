@@ -1,0 +1,30 @@
+  .side-bar{
+    width: 300px;
+    height: calc(100vh - 65px);
+    background-color: #253141;
+    position: absolute;
+    top: 65px;
+    float: left;
+    &__box{
+      width: 300px;
+      height: 100px;
+      border: 1px solid;
+      border-color:whitesmoke ;
+      p{
+        color: white;
+        line-height: 100px;
+
+      }      
+    }
+  }
+
+  .main-chat{
+    width: calc(100vw -  300px);
+    height: calc(100vh - 65px);
+    background-color: #fff;
+    position: absolute;
+    left: 300px;
+    top:65px;
+    float: right;
+  }
+
