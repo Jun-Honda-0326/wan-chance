@@ -39,8 +39,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |message|text||
-|user|reference||
-|room|reference||
+|user|references||
+|room|references||
 ### Association
 - belongs_to :user
 - belongs_to :room
@@ -56,8 +56,8 @@
 ## entriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user|reference||
-|room|reference||
+|user|references||
+|room|references||
 ### Association
 - belongs_to :user
 - belongs_to :room
