@@ -9,7 +9,6 @@
         .user-name
           投稿者:
           = link_to @post.user.name,"/users/#{@post.user.id}"
-          -# = @post.user.name
         .post-time
           投稿日:
           = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
