@@ -1,5 +1,6 @@
 .wrapper{
   display: flex;
+  width: 100vw;
 
 
 .side-bar{
@@ -30,7 +31,6 @@
   background-color: #fff;
   margin-top: 65px;
   float: right;
-  top:65px;
   &__messages{
     overflow: scroll;
     .message{
@@ -42,26 +42,32 @@
         &__name{
           margin-right: 15px;
         }
+        &__time{
+          font-size: 12px;
+        }
+       }
+       &__text{
+        margin: 15px 0 0 15px;
       }
-      &__text{
-        margin-left: 20px;
       }
     }
   }
   .message-form{
     height: 90px;
+    width: calc(100vw - 300px);
     background-color: #d2d2d2;
-    width:100%;
-    display: flex;
     position: absolute;
     bottom: 0px;
- 
-    align-items: center;
+    .new_message{
+      display: flex;
+      align-items: center;
+      line-height: 90px;
+    }
     .input-box{
       &__text{
         width: 70vw;
         height: 50px;
-       margin-left: 20px;
+        margin-left: 20px;
       }
     }
       .submit-btn{
@@ -69,9 +75,10 @@
         height: 50px;
         background-color: cornflowerblue;
         margin-left: 10px;
+        cursor: pointer;
      }  
     } 
   }
-}
+
 
 

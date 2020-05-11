@@ -12,35 +12,20 @@
 
   .main-chat
     .main-chat__messages
-      .message
-        .user-info
-          %p.user-info__name
-            本多淳
-          %p.user-info__time
-            2020-05-11 11:13
-        %p.message__text
-          ワンチャン可愛かった！
+      - @messages.each do |message|
+        .message
+          .user-info
+            .user-info__name
+              = message.user.name
+            .user-info__time
+              = message.created_at.strftime("%Y-%m-%d %H:%M")
+          .message__text
+            = message.message
       
-      .message
-        .user-info
-          %p.user-info__name
-            本多淳
-          %p.user-info__time
-            2020-05-11 11:13
-        %p.message__text
-          ワンチャン可愛かった！
-
-      .message
-        .user-info
-          %p.user-info__name
-            本多淳
-          %p.user-info__time
-            2020-05-11 11:13
-        %p.message__text
-          ワンチャン可愛かった！
       
-    
     .message-form
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-      %input{type:'submit',class:'submit-btn', value:"Send"}
+      = form_for @message do |f|
+        .input-box
+          = f.text_field :message, placeholder: 'メッセージを入力してください', class: "input-box__text"
+          = f.hidden_field :room_id, value: @room.id 
+        =f.submit "送信", class: "submit-btn"
