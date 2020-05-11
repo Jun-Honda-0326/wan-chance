@@ -2,8 +2,9 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @rooms = Room.all
-  end
+    @users = User.all
+    end
+
 
   def create
     @room = Room.create #user_show内のformから受け取ったパラメータを受け取りインスタンスに格納

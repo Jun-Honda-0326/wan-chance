@@ -1,20 +1,19 @@
-.wrapper
-  .main-chat
-    .main-chat__messages
-      - @messages.each do |message|
-        .message
-          .user-info
-            .user-info__name
-              = message.user.name
-            .user-info__time
-              = message.created_at.strftime("%Y-%m-%d %H:%M")
-          .message__text
-            = message.message
-      
-      
-    .message-form
-      = form_for @message do |f|
-        .input-box
-          = f.text_field :message, placeholder: 'メッセージを入力してください', class: "input-box__text"
-          = f.hidden_field :room_id, value: @room.id 
-        =f.submit "送信", class: "submit-btn"
+.main-chat
+  .main-chat__messages
+    - @messages.each do |message|
+      .message
+        .user-info
+          .user-info__name
+            = message.user.name
+          .user-info__time
+            = message.created_at.strftime("%Y-%m-%d %H:%M")
+        .message__text
+          = message.message
+    
+    
+  .message-form
+    = form_for [@room, @message] do |f|
+      .input-box
+        = f.text_field :message, placeholder: 'メッセージを入力してください', class: "input-box__text"
+        = f.hidden_field :room_id, value: @room.id 
+      =f.submit "送信", class: "submit-btn"

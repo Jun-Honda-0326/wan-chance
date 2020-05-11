@@ -5,7 +5,7 @@
     - unless @user.id == current_user.id #現在ログインしているユーザーではない
       - if @isRoom == true #既にroomがある時
         .p.user-show-romm 
-          = link_to 'DMを送る', room_path(@roomId), class: 'btn' #既に作成されているroomへ移動
+          = link_to 'DMを送る', room_messages_path(@roomId), class: 'btn' #既に作成されているroomへ移動
       - else #roomがまだ作成されていない時
         = form_for @room do |f|
           = fields_for @entry do |e|

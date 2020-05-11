@@ -34,6 +34,8 @@
   float: right;
   &__messages{
     overflow: scroll;
+    height: calc(100vh - 65px - 90px);
+    width: 100%;
     .message{
       .user-info{
         font-size: 16px;
