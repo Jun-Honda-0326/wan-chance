@@ -1,6 +1,10 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @rooms = Room.all
+  end
+
   def create
     @room = Room.create #user_show内のformから受け取ったパラメータを受け取りインスタンスに格納
     @entry1 = Entry.create(room_id: @room.id, user_id: current_user.id) #ログインしているユーザーに対するentory

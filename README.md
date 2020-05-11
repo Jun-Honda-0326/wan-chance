@@ -48,7 +48,7 @@
 ## roomsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user|reference||
+|id|||
 ### Association
 - has_many :massages, dependent: :destroy
 - has_many :entries, dependent: :destroy

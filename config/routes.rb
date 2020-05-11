@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   end
   resources :users, only: :show
 
-  resources :rooms, only: [:create, :show] 
+  resources :rooms, only: [:index,:create, :show] 
   resources :messages, only: :create
+  
 
 end

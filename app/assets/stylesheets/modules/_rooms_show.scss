@@ -1,10 +1,11 @@
 .wrapper{
   display: flex;
   width: 100vw;
-
+  height: 100vh;
+}
 
 .side-bar{
-  width: 320px;
+  width: 300px;
   height: calc(100vh - 65px);
   background-color: #253141;
   overflow: auto;
@@ -78,7 +79,6 @@
         cursor: pointer;
      }  
     } 
-  }
 
 
 
