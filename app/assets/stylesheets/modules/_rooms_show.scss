@@ -1,30 +1,77 @@
-  .side-bar{
-    width: 300px;
-    height: calc(100vh - 65px);
-    background-color: #253141;
-    position: absolute;
-    top: 65px;
-    float: left;
-    &__box{
-      width: 300px;
-      height: 100px;
-      border: 1px solid;
-      border-color:whitesmoke ;
-      p{
-        color: white;
-        line-height: 100px;
+.wrapper{
+  display: flex;
 
-      }      
+
+.side-bar{
+  width: 320px;
+  height: calc(100vh - 65px);
+  background-color: #253141;
+  overflow: auto;
+  float: left;
+  margin-top: 65px;
+  .current_names{
+    height: 25px;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  .name{
+    padding:50px 0 0 10px;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid;
+  } 
+  }     
+
+.main-chat{
+  height: calc(100vh - 65px);
+  width: calc(100vw - 300px);
+  background-color: #fff;
+  margin-top: 65px;
+  float: right;
+  top:65px;
+  &__messages{
+    overflow: scroll;
+    .message{
+      .user-info{
+        font-size: 16px;
+        color: black;
+        display: flex;
+        margin: 30px 0 0 20px;
+        &__name{
+          margin-right: 15px;
+        }
+      }
+      &__text{
+        margin-left: 20px;
+      }
     }
   }
-
-  .main-chat{
-    width: calc(100vw -  300px);
-    height: calc(100vh - 65px);
-    background-color: #fff;
+  .message-form{
+    height: 90px;
+    background-color: #d2d2d2;
+    width:100%;
+    display: flex;
     position: absolute;
-    left: 300px;
-    top:65px;
-    float: right;
+    bottom: 0px;
+ 
+    align-items: center;
+    .input-box{
+      &__text{
+        width: 70vw;
+        height: 50px;
+       margin-left: 20px;
+      }
+    }
+      .submit-btn{
+        width: 100px;
+        height: 50px;
+        background-color: cornflowerblue;
+        margin-left: 10px;
+     }  
+    } 
   }
+}
+
 

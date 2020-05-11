@@ -1,14 +1,46 @@
-.side-bar
-  .side-bar__box
-    %p.side-bar__box__name
+.wrapper
+  .side-bar
+    .side-bar__box
+      .current_names
+        DM相手一覧
+      .name
+        本多淳
+      .name
+        本多淳
+      .name
+        本多淳
+
+  .main-chat
+    .main-chat__messages
+      .message
+        .user-info
+          %p.user-info__name
+            本多淳
+          %p.user-info__time
+            2020-05-11 11:13
+        %p.message__text
+          ワンチャン可愛かった！
       
+      .message
+        .user-info
+          %p.user-info__name
+            本多淳
+          %p.user-info__time
+            2020-05-11 11:13
+        %p.message__text
+          ワンチャン可愛かった！
 
-
-.main-chat
-
-  .messages
-
-    .message
+      .message
+        .user-info
+          %p.user-info__name
+            本多淳
+          %p.user-info__time
+            2020-05-11 11:13
+        %p.message__text
+          ワンチャン可愛かった！
       
-
-  .form
+    
+    .message-form
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+      %input{type:'submit',class:'submit-btn', value:"Send"}
