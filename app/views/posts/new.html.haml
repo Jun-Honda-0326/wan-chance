@@ -6,7 +6,6 @@
       = f.text_area :text, class: 'form__text', placeholder: 'メッセージを添えて投稿してください'
       .form__mask
         = f.label :image, class: 'form__image' do
-          写真の投稿はこちらから→
           = icon('fas', 'image', class: 'icon')    
           = f.file_field :image, class: 'hidden'
       = f.submit '投稿', class: 'form__submit'

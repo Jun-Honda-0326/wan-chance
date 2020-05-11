@@ -12,14 +12,15 @@
 ### Association
 - has_many :posts
 - has_many :comments
-- has_many :messages
+- has_many :messages, dependent: :destory
+- has_many :entries, dependent: :destroy
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
 |text|text||
-|user_id|integer|null:false, foreign_key: true|
+|user_id|integer|null:false|
 ### Association
 - belongs_to :user
 - has_many :comments
@@ -37,10 +38,30 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|content|text||
-|user_id|integer|null:false, foreign_key: true|
+|message|text||
+|user|references||
+|room|references||
 ### Association
 - belongs_to :user
+- belongs_to :room
+
+## roomsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|||
+### Association
+- has_many :massages, dependent: :destroy
+- has_many :entries, dependent: :destroy
+
+## entriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user|references||
+|room|references||
+### Association
+- belongs_to :user
+- belongs_to :room
+
 
 
 
