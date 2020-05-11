@@ -1,0 +1,12 @@
+.side-bar
+  .side-bar__box
+    .current_names
+      DM相手一覧
+    
+    .dm_list
+      - @rooms.each do |room|
+        .dm_list__content
+          = link_to room_path(room), class: "dm_list__content__link" do
+            %h3.dm_list__content__link__box__name
+              = opponent_user(room)
+    

@@ -12,7 +12,7 @@
     
     
   .message-form
-    = form_for [@room, @message] do |f|
+    = form_for @message do |f|
       .input-box
         = f.text_field :message, placeholder: 'メッセージを入力してください', class: "input-box__text"
         = f.hidden_field :room_id, value: @room.id 
