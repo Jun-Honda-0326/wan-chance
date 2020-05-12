@@ -2,7 +2,8 @@
   .form
     %h1
       投稿
-    = form_with model:@post do |f|
+    = form_with model:[@post,@tag] do |f|
+      = f.text_field :tag_ids
       = f.text_area :text, class: 'form__text', placeholder: 'メッセージを添えて投稿してください'
       .form__mask
         = f.label :image, class: 'form__image' do
