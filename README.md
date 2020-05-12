@@ -12,8 +12,9 @@
 ### Association
 - has_many :posts
 - has_many :comments
-- has_many :messages, dependent: :destory
-- has_many :entries, dependent: :destroy
+- has_many :messages
+- has_many :entries
+- has_many :rooms, through: :entries
 
 ## postsテーブル
 |Column|Type|Options|
@@ -50,8 +51,9 @@
 |------|----|-------|
 |id|||
 ### Association
-- has_many :massages, dependent: :destroy
-- has_many :entries, dependent: :destroy
+- has_many :massages
+- has_many :entriess
+- has_many :users, through: :entries
 
 ## entriesテーブル
 |Column|Type|Options|
