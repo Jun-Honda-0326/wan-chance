@@ -1,9 +1,14 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
+  
+  def set_rooms
+    @rooms = Room.joins(:users).where("user_id=?", current_user.id) #自分以外のユーザーをが入っているroomの情報は取得しない
+  end
 
   def index
-    @rooms = Room.all
+    set_rooms
   end
+
 
   def create
     @room = Room.create #user_show内のformから受け取ったパラメータを受け取りインスタンスに格納
@@ -13,13 +18,16 @@ class RoomsController < ApplicationController
   end
 
   def show
+    set_rooms
     @room = Room.find(params[:id])
-    if Entry.where(user_id: current_user.id,room_id: @room.id).present? #現在ログインしているユーザーのidとそれに紐づくメッセージ
-      @messages = @room.messages #roomに紐づいたメッセージをメッセージインスタンスに格納
+    if Entry.where(user_id: current_user.id,room_id: @room.id).present? #現在ログインしているユーザーのidとそれに紐づくメッセージがあれば
+      @messages = @room.messages.order("created_at DESC") #roomに紐づいたメッセージをメッセージインスタンスに格納
       @message = Message.new #新しくメッセージを作成する場合
       @entries = @room.entries #ユーザー情報を表示させるため
     else
       redirect_back(fallback_location: root_path)
     end
   end
+
+
 end

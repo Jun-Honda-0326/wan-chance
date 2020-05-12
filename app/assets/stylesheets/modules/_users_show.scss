@@ -9,4 +9,26 @@
     font-size: 1.2rem;
     }
   }
+  .show-user{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color:red;
+  }
+  .user-show-room{
+    width: 250px;
+    height: 40px;
+    margin-top: 30px;
+    border: 1px solid;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 40px;
+    background-color: lightblue;
+    a{
+      color: black;
+    }
+  }
+  
 }
+
+

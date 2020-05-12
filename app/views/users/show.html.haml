@@ -1,16 +1,20 @@
 .contents
-  %p
+  .show-user<>
     = @name 
     さんのページ
+  .send-dm
     - unless @user.id == current_user.id #現在ログインしているユーザーではない
       - if @isRoom == true #既にroomがある時
-        .p.user-show-romm 
-          = link_to 'DMを送る', room_path(@roomId), class: 'btn' #既に作成されているroomへ移動
+        .p.user-show-room 
+          = link_to @name+'さんへDMを送る', room_path(@roomId), class: 'btn' #既に作成されているroomへ移動
       - else #roomがまだ作成されていない時
-        = form_for @room do |f|
-          = fields_for @entry do |e|
-            = e.hidden_field :user_id, value: @user.id
-          = f.submit 'DMを送る', class: 'btn'
+        .p.user-show-room 
+          = form_for @room do |f|
+            = fields_for @entry do |e|
+              = e.hidden_field :user_id, value: @user.id
+            = f.submit 'DMを始める', class: 'btn'
+
+          
   - @posts.each do |post|
     .content
       .img-box  

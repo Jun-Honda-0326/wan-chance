@@ -3,14 +3,14 @@
   text-decoration: none;
   box-sizing: border-box;
   a{
-    color: #990033;
+    color: black;
   }
 }
 
 .contents{
   width: 100%;
   height: calc(100vh - 65px);
-  background-color:#99CC66;
+  background: image-url('index.png');
   position: absolute;
   bottom: 0px;
   overflow: scroll;
@@ -30,9 +30,9 @@
     .text-box{
       height: 125px;
       width: 600px;
-      border: 1px solid;
+      border: 1.5px solid;
       background-color:white;
-      color: #990033;
+      border-color: #990990;
       .text{
         width: 400px;
         height: 80px;
