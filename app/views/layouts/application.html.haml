@@ -17,6 +17,8 @@
             = link_to 'マイページ',  "/users/#{current_user.id}" 
           %ul
             %li
+              = link_to 'DM一覧', rooms_path
+            %li
               = link_to '新規投稿', new_post_path
             %li
               = link_to 'ログアウト', destroy_user_session_path, method: :delete
