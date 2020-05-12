@@ -3,10 +3,9 @@
     .current_names
       DM相手一覧
     
-    .dm_list
+    .dm-list
       - @rooms.each do |room|
-        .dm_list__content
-          = link_to room_path(room), class: "dm_list__content__link" do
-            %h3.dm_list__content__link__box__name
+        .dm-list__name
+          = link_to room_path(room) do
+            %h3.dm-list__name__link
               = opponent_user(room)
-    

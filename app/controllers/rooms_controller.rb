@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!
   
   def set_rooms
-    @rooms = Room.joins(:users).where("user_id=?", current_user.id)
+    @rooms = Room.joins(:users).where("user_id=?", current_user.id) #自分以外のユーザーをが入っているroomの情報は取得しない
   end
 
   def index

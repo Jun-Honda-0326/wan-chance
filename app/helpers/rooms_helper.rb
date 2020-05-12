@@ -5,6 +5,6 @@ module RoomsHelper
     # 相手ユーザーの名前を取得
     name = entry[0].user.name
     # 名前を表示
-    tag.p "#{name}", class: "dm_list__content__link__box__name"
+    tag.p "#{name}"
   end
  end
