@@ -10,7 +10,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.create(post_params)
+    tag_list = params[:post][:tagname].split(",")
+    @post.save_posts(tag_list)
     redirect_to root_path
   end
   
@@ -28,7 +30,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:text, :image,).merge(user_id: current_user.id)
+    params.require(:post).permit(:text, :image, tag_ids:[]).merge(user_id: current_user.id)
   end
 
   def move_to_index

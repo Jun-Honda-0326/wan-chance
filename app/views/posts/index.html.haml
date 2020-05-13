@@ -7,6 +7,9 @@
       .text-box
         .text
           = simple_format(post.text)
+        .tags
+          - post.tags.each do |tag|
+            = tag.tagname
         .user-info
           .user-name
             投稿者:

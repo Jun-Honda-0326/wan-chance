@@ -26,6 +26,21 @@
 - belongs_to :user
 - has_many :comments
 
+## post_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post|references|
+|tag|references||
+- belongs_to :post
+- belongs_to :tag
+
+## tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text||
+- has_many :post_tags
+- has_many :posts, through: :post_tags
+
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
