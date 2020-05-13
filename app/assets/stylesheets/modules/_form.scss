@@ -1,29 +1,42 @@
-.form{
-  padding-top: 100px;
-  h1{
-    font-size: 40px;
-  }
-  &__text{
+form{
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  .text-box{
     width: 500px;
-    height: 100px;
+    height: 300px;
+    border: 1.3px solid;
   }
-  &__image{
+  .tag-box{
+    width: 500px;
+    height: 50px;
+    margin-top: 30px;
+    border: 1.3px solid;
+  }
+  .image{
     padding: 5px 0;
     float: right;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     cursor: pointer;
+    position: absolute;
+    bottom:155px;
+    right: 5px;
   }
   .hidden{
     display: none;
   }
-
-  &__submit{
+  .submit{
     width: 500px;
     padding: 20px;
     background-color: steelblue;
     cursor: pointer;
     border-radius: 10px;
     color: white;
-    font-weight:bo;
+    font-weight:bold;
+    margin-top: 20px;
   }
 }
