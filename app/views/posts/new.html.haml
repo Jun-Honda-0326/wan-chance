@@ -2,11 +2,12 @@
   .form
     %h1
       投稿
-    = form_with model:[@post,@tag] do |f|
-      = f.text_field :tag_ids
+    = form_for @post do |f| 
       = f.text_area :text, class: 'form__text', placeholder: 'メッセージを添えて投稿してください'
       .form__mask
         = f.label :image, class: 'form__image' do
           = icon('fas', 'image', class: 'icon')    
           = f.file_field :image, class: 'hidden'
+      = f.text_field :tagname,class: 'tag-box', placeholder: 'タグ付け', value: @tag_list
       = f.submit '投稿', class: 'form__submit'
+      

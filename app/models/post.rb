@@ -7,12 +7,18 @@ class Post < ApplicationRecord
   has_many :tags, through: :post_tags
   mount_uploader :image, ImageUploader
 
-  after_create do
-    post = Post.find_by(id: self.id)
-    tags = self.text.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
-    tags.uniq.map do |t|
-      tag = Tag.find_or_created_by(text: t.downcase.delete('#'))
-      post.tags << tag
+  def save_posts(tags)
+    current_tags = self.tags.pluck(:tagname) unless self.tags.nil?
+    old_tags = current_tags - tags
+    new_tags = tags - current_tags
+  
+    old_tags.each do |old_name|
+      self.tags.delete Tag.find_by(tagname:old_name)
+    end
+
+    new_tags.each do |new_name|
+      post_tag = Tag.find_or_create_by(tagname:new_name)
+      self.tags << post_tag
     end
   end
 end
