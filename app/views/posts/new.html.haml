@@ -1,13 +1,13 @@
 .contents
   %h1
     記事投稿
-  .form
-  = form_for @post do |f|
-    = f.text_area :text, class: 'text-box', placeholder: 'メッセージを添えて投稿してください'
-    = f.text_field :tagname,class: 'tag-box', placeholder: 'タグ付けは,で区切ってください', value: @tag_list
-    .form__mask
-      = f.label :image, class: 'image' do
-        = icon('fas', 'image', class: 'icon')    
-        = f.file_field :image, class: 'hidden'
-    = f.submit '投稿', class: 'submit'
-    
+  .post-form
+    = form_for @post do |f|
+      = f.text_area :text, class: 'text-box', placeholder: 'メッセージを添えて投稿してください'
+      = f.text_field :tagname,class: 'tag-box', placeholder: 'タグ付けは,で区切ってください', value: @tag_list
+      .form__mask
+        = f.label :image, class: 'image' do
+          = icon('fas', 'image', class: 'icon')    
+          = f.file_field :image, class: 'hidden'
+      = f.submit '投稿', class: 'post-submit'
+      

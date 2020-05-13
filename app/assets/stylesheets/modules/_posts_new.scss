@@ -1,4 +1,4 @@
-form{
+#new_post{
   padding-top: 50px;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ form{
   .hidden{
     display: none;
   }
-  .submit{
+  .post-submit{
     width: 500px;
     padding: 20px;
     background-color: steelblue;

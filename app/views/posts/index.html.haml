@@ -8,8 +8,9 @@
         .text
           = simple_format(post.text)
         .tags
+          タグ:
           - post.tags.each do |tag|
-            = tag.tagname
+            = + tag.tagname
         .user-info
           .user-name
             投稿者:
