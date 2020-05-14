@@ -14,7 +14,28 @@
               = e.hidden_field :user_id, value: @user.id
             = f.submit 'DMを始める', class: 'btn'
 
+          
+  - @posts.each do |post|
+    .content
+      .img-box  
+        = link_to post_path(post) do
+          = image_tag post.image.url, size:'600x415'
+      .text-box
+        .text
+          = simple_format(post.text)
+        .tags 
+          - if post.tags.any?
+            タグ
+            - post.tags.each do |tag|
+              = link_to tag.tagname, posts_path(tag_id:tag.id)
+        .user-info
+          .post-time
+            投稿:
+            = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+        - if user_signed_in? && current_user.id == post.user.id
+          .trash-icon
+            = link_to "/posts/#{post.id}", method: :delete do
+              = icon("fas", "trash", class: 'icon')
+  = paginate(@posts)
 
-  = render "posts/post", locals: {post: post}
-    
 
