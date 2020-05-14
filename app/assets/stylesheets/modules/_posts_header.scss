@@ -1,3 +1,4 @@
+
 .header{
   width: 100vw;
   height: 65px;
@@ -5,14 +6,18 @@
   letter-spacing: 0.12rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   line-height: 90px;
   position: fixed;
   border-bottom: 0.8px solid;
+  overflow:hidden;
+  box-sizing: border-box;
   a{
     color: #666;
   }
   &__logo{
+   
+    height: 65px;
+    line-height: 65px;
     margin-left: 250px;
     font-size: 30px;
     font-weight: bold;
@@ -21,12 +26,14 @@
   &__user-nav{
     display: flex;
     align-items: center;
+    margin-right: 100px;
+    width: 600x;
+    line-height: 65px;
   }
     }
   ul{
-    height: 50px;
     display: flex;
-    margin-right: 150px;
+    height: 50px;
     li{
       margin-right: 10px;
       line-height: 50px;
@@ -34,5 +41,6 @@
       border: 1.5px solid;
       border-color: cornflowerblue;
       padding: 0 10px;
+      text-align: center;
   }
 }
