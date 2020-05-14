@@ -4,7 +4,7 @@
 
 
 # DB設計
-(https://user-images.githubusercontent.com/60055417/81885019-634fc900-95d4-11ea-9562-38b9ddd5033b.png)
+![わんーchance_DB設計 - データベース ER 図](https://user-images.githubusercontent.com/60055417/81885019-634fc900-95d4-11ea-9562-38b9ddd5033b.png)
 
 ## usersテーブル
 |Column|Type|Options|
