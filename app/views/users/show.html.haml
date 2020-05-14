@@ -25,7 +25,7 @@
           = simple_format(post.text)
         .tags 
           - if post.tags.any?
-            タグ：
+            タグ:
             - post.tags.each do |tag|
               = link_to tag.tagname, posts_path(tag_id:tag.id)
         .user-info
