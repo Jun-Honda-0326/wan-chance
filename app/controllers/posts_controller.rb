@@ -2,7 +2,12 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index 
-    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    if params[:tag_id]
+      @select_tag = Tag.find(params[:tag_id])
+      @posts = Post.from_tag(params[:tag_id]).page(params[:page])
+    else
+      @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    end 
   end
 
   def new

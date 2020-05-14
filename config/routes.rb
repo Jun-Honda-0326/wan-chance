@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:index, :new, :create, :show, :destroy] do
     resources :comments, only: :create
+    
   end
   resources :users, only: :show
+  resources :tags, only: :show
 
   resources :rooms, only: [:index,:create, :show] 
   resources :messages, only: :create
