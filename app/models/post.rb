@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
   has_many :comments
-  has_many :post_tags
+  has_many :post_tags, dependent: :delete_all
   has_many :tags, through: :post_tags
   mount_uploader :image, ImageUploader
  
@@ -16,15 +16,15 @@ class Post < ApplicationRecord
 
   def save_posts(tags)
     current_tags = self.tags.pluck(:tagname) unless self.tags.nil?
-    old_tags = current_tags - tags
     new_tags = tags - current_tags
+    old_tags = current_tags - tags
   
     old_tags.each do |old_name|
-      self.tags.delete Tag.find_by(tagname:old_name)
+      self.tags.delete Tag.find_by(tagname:old_name.downcase.delete('#'))
     end
 
     new_tags.each do |new_name|
-      post_tag = Tag.find_or_create_by(tagname:new_name)
+      post_tag = Tag.find_or_create_by(tagname:new_name.downcase.delete('#'))
       self.tags << post_tag
     end
   end

@@ -1,14 +1,9 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
-  
-  def set_rooms
+ 
+  def index
     @rooms = Room.joins(:users).where("user_id=?", current_user.id) #自分以外のユーザーをが入っているroomの情報は取得しない
   end
-
-  def index
-    set_rooms
-  end
-
 
   def create
     @room = Room.create #user_show内のformから受け取ったパラメータを受け取りインスタンスに格納
@@ -28,6 +23,5 @@ class RoomsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
-
-
+  
 end

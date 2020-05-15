@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
 
+  before_action :set_user
+
   def show
     if user_signed_in?
-      @user = User.find(params[:id])
-      @name = @user.name
-      @posts = @user.posts.page(params[:page]).per(5).order("created_at DESC")
       @currentUserEntry=Entry.where(user_id: current_user.id) # 現在ログインしているユーザー情報
       @userEntry=Entry.where(user_id: @user.id) #相手方のユーザー情報
       unless @user.id == current_user.id #現在ログインしてるユーザーではない時
@@ -22,11 +21,13 @@ class UsersController < ApplicationController
           @entry = Entry.new
         end
       end
-    else #ユーザーがログインしていない時
-      @user = User.find(params[:id])
-      @name = @user.name
-      @posts = @user.posts.page(params[:page]).per(5).order("created_at DESC")
     end
+  end
+
+  def set_user
+    @user = User.find(params[:id])
+    @name = @user.name
+    @posts = @user.posts.page(params[:page]).per(5).order("created_at DESC")
   end
 
 end
