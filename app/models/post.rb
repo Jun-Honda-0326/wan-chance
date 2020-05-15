@@ -9,7 +9,10 @@ class Post < ApplicationRecord
  
   scope :from_tag, -> (tag_id) {where(id: post_ids = PostTag.where(tag_id:tag_id).select(:post_id))}
 
-
+  def self.search(search)
+    return Post.all unless search
+    Post.where('text LIKE(?)', "%#{search}%")
+  end
 
   def save_posts(tags)
     current_tags = self.tags.pluck(:tagname) unless self.tags.nil?

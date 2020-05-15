@@ -10,7 +10,7 @@
 .contents{
   width: 100%;
   height: calc(100vh - 65px);
-  background:greenyellow;
+  background-image:url(index.png);
   position: absolute;
   bottom: 0px;
   overflow: scroll;
@@ -18,6 +18,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  .search-box{
+    margin-top: 25px;
+    .search-form{
+      display: flex;
+      .search-input{
+        width: 350px;
+        height: 50px;
+        margin-right: 15px;
+      }
+      .search-btn{
+        width: 100px;
+        height: 50px;
+      }
+    }
+  }
+  
   .content{
     width: 600px;
     height: 400x;
@@ -36,8 +52,7 @@
       .text{
         width: 590x;
         height: 60px;
-        padding-left:10px;
-        
+        padding-left:10px;        
       }
       .tags{
         width: 400x;
