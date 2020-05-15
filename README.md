@@ -6,4 +6,4 @@
 
 
 # DB設計
-![わんーchance_DB設計 - データベース ER 図](https://user-images.githubusercontent.com/60055417/81885019-634fc900-95d4-11ea-9562-38b9ddd5033b.png)
+![わんーchance_DB設計 - データベース ER 図](https://user-images.githubusercontent.com/60055417/82001792-f6e9ce00-9696-11ea-8d05-8262e6a51d24.png)
