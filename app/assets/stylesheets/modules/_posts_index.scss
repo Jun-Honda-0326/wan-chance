@@ -7,17 +7,6 @@
   }
 }
 
-.search-box{
-  width: 100px;
-  height: 30px;
-  z-index: 5;
-  position: absolute;
-  top:80px;
-  left:600px;
-  .search-form{
-    display: flex;
-  }
-}
 
 .contents{
   width: 100%;
@@ -30,6 +19,24 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  .search-box{
+    margin-top: 25px;
+    .search-form{
+      display: flex;
+      .search-input{
+        width: 350px;
+        height: 50px;
+        margin-right: 15px;
+      }
+      .search-btn{
+        width: 100px;
+        height: 50px;
+
+      }
+    }
+
+  }
+  
   .content{
     width: 600px;
     height: 400x;
