@@ -4,7 +4,7 @@
   .post-form
     = form_for @post do |f|
       = f.text_area :text, class: 'text-box', placeholder: 'メッセージと写真は必須です'
-      = f.text_field :tagname,class: 'tag-box', placeholder: 'タグ付けは,で区切ってください', value: @tag_list
+      = f.text_field :tagname,class: 'tag-box', placeholder: 'ハッシュタグは , で区切ってください（例）かわいい,愛犬 など', value: @tag_list
       .form__mask
         = f.label :image, class: 'image' do
           = icon('fas', 'image', class: 'icon')    
