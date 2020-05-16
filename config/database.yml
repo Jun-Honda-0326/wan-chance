@@ -81,6 +81,6 @@ test:
 production:
   <<: *default
   database: wan-chance_production
-  username: root
+  username: postgres
   socket: /var/lib/postgresql/postgresql.sock
   password: <%= ENV['WAN-CHANCE_DATABASE_PASSWORD'] %>
