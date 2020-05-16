@@ -8,9 +8,9 @@
         = f.submit 'コメント', class: 'btn'
     - else
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-
+      
     .comments  
-      %h4<>
+      %h5<>
         コメント一覧
       - if @comments
         - @comments.each do |comment|
