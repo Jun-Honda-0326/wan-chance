@@ -2,6 +2,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  
   a{
     color: black;
   }
@@ -11,6 +12,7 @@
   width: 100%;
   height: calc(100vh - 65px);
   background-image:url(index.png);
+  background-color:#CCFF99;
   position: absolute;
   bottom: 0px;
   overflow: scroll;
@@ -48,7 +50,8 @@
       width: 600px;
       border: 1.5px solid;
       background-color:white;
-      border-color: #990990;
+      border-color:#C71585;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       .text{
         width: 590x;
         height: 60px;

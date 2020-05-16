@@ -2,31 +2,37 @@
 .header{
   width: 100vw;
   height: 65px;
-  color: #666;
+  color: #333333;
+  background-color:#EEEEEE;
   letter-spacing: 0.12rem;
   display: flex;
   justify-content: space-between;
   line-height: 90px;
   position: fixed;
-  border-bottom: 0.8px solid;
+  border-bottom: 1.5px solid;
   overflow:hidden;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   a{
     color: #666;
   }
   &__logo{
-   
     height: 65px;
     line-height: 65px;
-    margin-left: 250px;
-    font-size: 30px;
+    margin-left: 100px;
+    font-size: 40px;
     font-weight: bold;
-   
+  }
+  &__logo-about{
+    color: #FF00FF;
+    margin-left: 165px;
+    font-size:30px ;
+    line-height: 65px;
   }
   &__user-nav{
     display: flex;
     align-items: center;
-    margin-right: 100px;
+    margin-right: 50px;
     width: 600x;
     line-height: 65px;
     p.name{

@@ -28,7 +28,7 @@
           - if post.tags.any?
             タグ
             - post.tags.each do |tag|
-              = link_to tag.tagname, posts_path(tag_id:tag.id)
+              = link_to "#" + tag.tagname, posts_path(tag_id:tag.id)
         .user-info
           .post-time
             投稿:
