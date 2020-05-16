@@ -82,5 +82,5 @@ production:
   <<: *default
   database: wan-chance_production
   username: root
-  socket: /var/lib/postgresql/postgresql.sock
-  password: <%= ENV['WAN-CHANCE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
