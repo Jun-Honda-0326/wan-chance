@@ -79,7 +79,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: mysql2
+  <<: *default
+  adapter: mysql2
   database: wan-chance_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
