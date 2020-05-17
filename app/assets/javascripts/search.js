@@ -27,7 +27,7 @@ $(function(){
     var html = `<div class='name'>${ msg }</div>`
     search_list.append(html);
   }
-
+  
   $(".search-input").on("keyup", function(){
     var input = $(".search-input").val();
     $.ajax({
