@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def index 
     if params[:tag_id]
       @select_tag = Tag.find(params[:tag_id])
-      @posts = Post.from_tag(params[:tag_id]).page(params[:page])
+      @posts = Post.from_tag(params[:tag_id]).order("created_at DESC").page(params[:page]).per(5)
     else
       @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     end 

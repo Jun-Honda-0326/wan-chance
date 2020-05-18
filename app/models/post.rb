@@ -20,11 +20,11 @@ class Post < ApplicationRecord
     old_tags = current_tags - tags
   
     old_tags.each do |old_name|
-      self.tags.delete Tag.find_by(tagname:old_name.downcase.delete('#'))
+      self.tags.delete Tag.find_by(tagname:old_name)
     end
 
     new_tags.each do |new_name|
-      post_tag = Tag.find_or_create_by(tagname:new_name.downcase.delete('#'))
+      post_tag = Tag.find_or_create_by(tagname:new_name)
       self.tags << post_tag
     end
   end
