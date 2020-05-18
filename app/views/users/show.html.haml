@@ -14,7 +14,6 @@
               = fields_for @entry do |e|
                 = e.hidden_field :user_id, value: @user.id
               = f.submit 'DMを始める', class: 'btn'
-
           
   - @posts.each do |post|
     .content
