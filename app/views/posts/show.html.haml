@@ -3,7 +3,7 @@
     
   .comment-box
     - if current_user
-      = form_with model: [@post, @comment] do |f|
+      = form_with(model: [@post, @comment], local: true) do |f|
         = f.text_area :text, placeholder: 'コメントする' 
         = f.submit 'コメント', class: 'btn'
     - else
