@@ -6,12 +6,12 @@
 ワンチャンの写真を通じてユーザー同士がオンライン上、そしてオフラインでも繋がれる機会（chance）になって欲しいとの思いからこのアプリ名にしました。
 
 # 本番環境
-- URL:http://www.wan-chance.work/
-- インフラ：AWS（EC２）
-- AppServer:Unicorn、 WebServer:Nginx
-- デプロイ:Capstranoによる自動デプロイ
-- DB:MySQL
-- DNS：Route53
+- URL: http://www.wan-chance.work/
+- インフラ： AWS（EC２）
+- AppServer: Unicorn、 WebServer: Nginx
+- デプロイ: Capstranoによる自動デプロイ
+- DB: MySQL
+- DNS： Route53
  
 # このアプリの使用方法
 まずはログインをして、新規投稿ボタンからお気に入りのワンチャンの写真を投稿してみましょう。それから他のユーザーが投稿した写真も見てみましょう。気になる投稿があれば、詳細画面に写ってコメントをしましょう。ユーザー名をクリックすると、ユーザーのページに飛べるので、そこから気になるユーザーにダイレクトメッセージを送ってやりとりをしてみて下さい。新たな出会いがあるかもしれません。
