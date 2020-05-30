@@ -7,7 +7,7 @@
 
 # 本番環境
 - URL: http://www.wan-chance.work/
-- インフラ： AWS（EC２）
+- インフラ: AWS（EC２）
 - AppServer: Unicorn、 WebServer: Nginx
 - デプロイ: Capstranoによる自動デプロイ
 - DB: MySQL
