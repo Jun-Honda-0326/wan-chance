@@ -27,11 +27,12 @@
   .post-submit{
     width: 500px;
     padding: 20px;
-    background-color: steelblue;
+    background-color: lightskyblue;
     cursor: pointer;
     border-radius: 10px;
-    color: white;
-    font-weight:bold;
+    border: 1px solid lightskyblue;
+    color: black;
+    font-size: 18px;
     margin-top: 20px;
   }
 }

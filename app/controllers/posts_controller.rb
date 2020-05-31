@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    tag_list = params[:post][:tagname].split(",")
+    tag_list = params[:post][:tagname].split("/")
     if @post.save&@post.save_posts(tag_list)
       redirect_to root_path, notice: "投稿が完了しました"      
     else

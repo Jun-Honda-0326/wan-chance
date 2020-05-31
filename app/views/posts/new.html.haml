@@ -6,6 +6,6 @@
       = f.text_area :text, class: 'text-box', placeholder: 'メッセージと写真は必須です'
       .form__mask
         = f.file_field :image, class: "image"
-      = f.text_field :tagname,class: 'tag-box', placeholder: 'ハッシュタグは , で区切ってください（例）かわいい,愛犬 など', value: @tag_list
-      = f.submit '投稿', class: 'post-submit'
+      = f.text_field :tagname,class: 'tag-box', placeholder: 'タグは / で区切ってください ex）かわいい/愛犬', value: @tag_list
+      = f.submit '投稿する', class: 'post-submit'
       
