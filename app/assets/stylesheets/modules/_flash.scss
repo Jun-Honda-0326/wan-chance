@@ -1,16 +1,18 @@
 .notification {
+  height: 20px;
   .notice {
     background-color: #38aef0;
     color: white;
     text-align: center;
-    height: 20px;
+   
+  
+
   }
 
   .alert {
     background-color: #f35500;
     color: white;
     text-align: center;
-    height: 20px;
   }
 
 }
