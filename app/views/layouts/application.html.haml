@@ -8,6 +8,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    = render 'layouts/notifications'
     .header
       .header__logo
         = link_to 'わん-chance', root_path
@@ -33,4 +34,5 @@
               = link_to 'ログイン', new_user_session_path
             %li
               = link_to '新規登録', new_user_registration_path
+    
     = yield
