@@ -15,10 +15,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = Post.new(post_params)
     tag_list = params[:post][:tagname].split(",")
-    @post.save_posts(tag_list)
-    redirect_to root_path
+    if @post.save&@post.save_posts(tag_list)
+      redirect_to root_path, notice: "投稿が完了しました"      
+    else
+      redirect_to new_post_path, alert: "メッセージと写真は必須です"
+    end 
   end
   
   def show

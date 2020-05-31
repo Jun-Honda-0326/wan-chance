@@ -8,11 +8,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    = render 'layouts/notifications'
     .header
       .header__logo
         = link_to 'わん-chance', root_path
       .header__logo-about
-        〜わんこで繋がる交流サイト〜
+        わんこで繋がる交流サイト
       .header__user-nav
         - if user_signed_in?
           %p.name
