@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-describe Post, type: :model  do
+describe Post  do
   describe '#create' do
 
       it 'text と imageがあれば投稿を保存できること' do
+        post = build(:post)
         expect(build(:post)).to be_valid
       end
 
