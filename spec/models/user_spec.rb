@@ -38,5 +38,6 @@ describe User, type: :model do
       another_user.valid?
       expect(another_user.errors[:email]).to include("はすでに存在します")
     end
+    
   end
 end
