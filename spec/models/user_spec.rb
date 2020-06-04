@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User do
+describe User, type: :model do
   describe '#create' do
 
     it "nameとemail、passwordとpassword_confirmationが存在すれば登録できること" do
@@ -38,6 +38,8 @@ describe User do
       another_user.valid?
       expect(another_user.errors[:email]).to include("はすでに存在します")
     end
+
+   
 
 
   end
