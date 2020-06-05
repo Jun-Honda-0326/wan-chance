@@ -18,16 +18,15 @@
     border: 1.3px solid;
   }
   .image__form{
-    width: 400px;
-    height: 400px;
-    border: 1.3px solid;
-    background-color: white;
     margin-top: 25px;
-    .img{
+    img{
       width: 400px;
       height: 400px;
     }
-    
+    .hidden_file{
+      margin-right: 40px;
+    }
+
   }
   .post-submit{
     width: 400px;
