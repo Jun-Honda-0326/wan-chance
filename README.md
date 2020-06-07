@@ -18,7 +18,40 @@
 まずはログインをして、新規投稿ボタンからお気に入りのワンチャンの写真を投稿してみましょう。それから他のユーザーが投稿した写真も見てみましょう。気になる投稿があれば、詳細画面に写ってコメントをしましょう。ユーザー名をクリックすると、ユーザーのページに飛べるので、そこから気になるユーザーにダイレクトメッセージを送ってやりとりをしてみて下さい。新たな出会いがあるかもしれません。
 
 # DB設計
+
 ![わんーchance_DB設計 - データベース ER 図](https://user-images.githubusercontent.com/60055417/82001792-f6e9ce00-9696-11ea-8d05-8262e6a51d24.png)
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|name|string|null: false|
+|admin|boolean|default:false|
+### Association
+- has_many :post
+- has_many :comments
+- has_many :messages
+- has_many :entries
+- has_many :rooms, through: :entries 
+
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|---------|
+|image|string|------|
+|user_id|integer|---|
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|name|string|null: false|
+
+
+
+
 
 # 実装機能
 - ユーザー登録、ログイン、ログアウト機能
