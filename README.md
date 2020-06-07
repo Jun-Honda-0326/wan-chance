@@ -61,16 +61,16 @@
 ## post_tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|post_id|bigint|add_index:post, foreign_key:true|
-|tag_id|bigint|add_index:tag, foreign_key:true|
+|post_id|bigint|add_index, foreign_key:true|
+|tag_id|bigint|add_index, foreign_key:true|
 ### Association
 - belongs_to :post
 - belongs_to :tag
 ## entoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|binint|add_index:user, foreign_key:true|
-|room_id|bigint|add_index:room, foreigh_key:true|
+|user_id|binint|add_index, foreign_key:true|
+|room_id|bigint|add_index, foreigh_key:true|
 ### Association
 - belongs_to :user
 - belongs_to :room
