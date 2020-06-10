@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'likes/create'
+  get 'likes/destroy'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: "posts#index"
 
   resources :posts, only: [:index, :new, :create, :show, :destroy] do
-    resources :comments, only: :create
+    resources :likes, only: [:create, :destroy] 
+    resources :comments, only: :createl
     collection do
       get 'search'
     end
