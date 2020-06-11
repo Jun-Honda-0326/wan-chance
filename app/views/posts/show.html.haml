@@ -1,6 +1,9 @@
 .contents
   = render @post
-    
+  = render "likes/like" 
+        
+  
+
   .comment-box
     - if current_user
       = form_with(model: [@post, @comment], local: true) do |f|
