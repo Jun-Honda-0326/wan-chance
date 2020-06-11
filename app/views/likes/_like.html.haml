@@ -1,8 +1,10 @@
 - if current_user.likes.find_by(post_id: @post.id)
-  = link_to  post_like_path(@post), method: :delete do
-    = image_tag "icon_stared.png", size: "20x20"
-    = "#{@post.likes.count}"
+  #liked
+    = link_to post_like_path(@post, current_user.likes.find_by(post_id: @post.id)), method: :delete, remote: true do
+      = image_tag "icon_stared.png", size: "20x20"
+      = "#{@post.likes.count}"
 - else
-  = link_to post_likes_path(@post), method: :post do
-    = image_tag "icon_star.png", size: "20x20"
-    = "#{@post.likes.count}"
+  #likable
+    = link_to post_likes_path(@post,current_user.likes.build),method: :post, remote: true do
+      = image_tag "icon_star.png", size: "20x20"
+      = "#{@post.likes.count}"

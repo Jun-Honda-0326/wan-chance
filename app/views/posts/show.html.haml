@@ -1,8 +1,7 @@
 .contents
   = render @post
-  = render "likes/like" 
-        
-  
+  - if user_signed_in?
+    = render partial: "likes/like" 
 
   .comment-box
     - if current_user
