@@ -1,4 +1,8 @@
 - if current_user.likes.find_by(post_id: @post.id)
-  = link_to 'いいね済み', post_like_path(@post), method: :delete
+  = link_to  post_like_path(@post), method: :delete do
+    = image_tag "icon_stared.png", size: "20x20"
+    = "#{@post.likes.count}"
 - else
-  = link_to 'いいね',  post_likes_path(@post), method: :post
+  = link_to post_likes_path(@post), method: :post do
+    = image_tag "icon_star.png", size: "20x20"
+    = "#{@post.likes.count}"
