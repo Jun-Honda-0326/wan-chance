@@ -1,0 +1,6 @@
+-if current_user.likes.find_by(post_id: @post.id)
+  = link_to post_like_path(@post), method: :delete
+    p いいね済
+- else
+  = link_to post_likes_path(@post),method: :post
+    p いいね
