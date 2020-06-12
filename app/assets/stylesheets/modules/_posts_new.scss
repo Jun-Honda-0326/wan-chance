@@ -5,17 +5,21 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  
 
   .text-box{
     width: 500px;
     height: 100px;
     border: 1.3px solid;
+    resize: none;
+    border-radius: 3px;
   }
   .tag-box{
     width: 500px;
     height: 50px;
     margin-top: 25px;
     border: 1.3px solid;
+    border-radius: 3px;
   }
   .image__form{
     margin-top: 25px;
