@@ -11,7 +11,7 @@
         - post.tags.each do |tag|
           = link_to '#'+tag.tagname, posts_path(tag_id:tag.id)
             
-        
+      
     .user-info
       .user-name
         投稿者:
@@ -19,8 +19,7 @@
       .post-time
         投稿:
         = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
-      - if controller.controller_name == 'posts' && controller.action_name == 'show' 
-        = render partial: "likes/like"
-       
-       
-    
+        - if controller.controller_name == 'posts' && controller.action_name == 'show' 
+          - if current_user
+            .like
+              = render partial: "like", locals: {post: post}

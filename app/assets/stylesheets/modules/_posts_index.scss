@@ -75,8 +75,14 @@
         display: flex;
         justify-content: space-between;
         .post-time{
-          padding-right: 10px;
+          display: flex;
+          align-items: center;
         } 
+        .like{
+          padding-left: 8px;
+          font-size: 18px;
+          margin-right: 8px;
+        }
       }
     }
   }
