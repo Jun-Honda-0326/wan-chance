@@ -56,7 +56,8 @@ Ruby/Ruby on Rails/Haml/SCSS/Javascripit
 - 統合テスト
 
 # DB設計
-![わんーchance_DB設計 - データベース ER 図](https://user-images.githubusercontent.com/60055417/82001792-f6e9ce00-9696-11ea-8d05-8262e6a51d24.png)
+![わんーchance_DB設計 - データベース ER 図](https://user-images.githubusercontent.com/60055417/84569620-0e65c500-adc3-11ea-9fda-88ee3d7d5af5.png)
+
 
 ## usersテーブル
 |Column|Type|Options|
