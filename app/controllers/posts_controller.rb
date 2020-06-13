@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def index 
     if params[:tag_id]
       @select_tag = Tag.find(params[:tag_id])
-      @posts = Post.from_tag(params[:tag_id]).order("created_at DESC").page(params[:page]).per(5)
+      @posts = Post.from_tag(params[:tag_id]).includes(:user).order("created_at DESC").page(params[:page]).per(5)
     else
       @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     end 
@@ -28,6 +28,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
+    @like = Like.new
   end
 
   def destroy
