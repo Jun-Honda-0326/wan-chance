@@ -33,7 +33,7 @@
             = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
         - if user_signed_in? && current_user.id == post.user.id
           .trash-icon
-            = link_to "/posts/#{post.id}", method: :delete do
+            = link_to "/posts/#{post.id}", method: :delete, data: {confirm: '削除しますか?'} do
               = icon("fas", "trash", class: 'icon') 
   = paginate(@posts)
 

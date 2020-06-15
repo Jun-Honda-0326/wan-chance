@@ -15,14 +15,14 @@
       .header__user-nav
         - if user_signed_in?
           %p.name
-            = link_to current_user.name+'のページ',  "/users/#{current_user.id}" 
+            = link_to ' マイページ',  "/users/#{current_user.id}" 
           %ul
             %li
               = link_to 'DM一覧', rooms_path
             %li
               = link_to '新規投稿', new_post_path
             %li
-              = link_to 'ログアウト', destroy_user_session_path, method: :delete
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: 'ログアウトしますか?'}
             - if current_user.try(:admin?)
               %li
                 = link_to '管理者画面', rails_admin_path
