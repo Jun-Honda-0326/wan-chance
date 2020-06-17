@@ -2,12 +2,9 @@ $(function(){
   function buildHTML(comment){
     var html = `<div class = "comment">
                   <div class = "comment__name">
-                    <a href=/users/${comment.user_id}>${comment.user_name}</a>
-                    ：
+                    <a href=/users/${comment.user_id}>${comment.user_name}</a>:
                   </div>
-                  <div class = "comment__text">
-                  ${comment.text}
-                </div>`
+                  <div class = "comment__text">${comment.text}</div>`
     return html;
   }
   $('#new_comment').on('submit', function(e){
@@ -25,7 +22,7 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.comment-box').append(html);
+      $('.comments').append(html);
       $('.comment__text-box').val('');
       $('.btn').prop('disabled', false);
     })
