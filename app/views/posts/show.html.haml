@@ -6,9 +6,9 @@
 
   .comment-box
     - if current_user
-      = form_with(model: [@post, @comment], local: true) do |f|
-        = f.text_area :text, placeholder: 'コメントする' 
-        = f.submit 'コメント', class: 'btn'
+      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
+        = f.text_area :text, placeholder: 'コメントする' , class: "comment__text-box"
+        = f.submit 'コメント', class: 'btn', class: "comment__form"
     - else
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
       
