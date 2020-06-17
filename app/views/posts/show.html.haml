@@ -1,13 +1,10 @@
 .contents
   = render @post
-  -# - if current_user
-  -#   = render partial: "likes/like" 
-  
 
   .comment-box
     - if current_user
-      = form_with(model: [@post, @comment], local: true) do |f|
-        = f.text_area :text, placeholder: 'コメントする' 
+      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
+        = f.text_area :text, placeholder: 'コメントする' , class: "comment__text-box"
         = f.submit 'コメント', class: 'btn'
     - else
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
