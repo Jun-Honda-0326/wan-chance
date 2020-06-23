@@ -48,6 +48,7 @@ Ruby/Ruby on Rails/Haml/SCSS/Javascripit
 ![a1449feb743974084c405cb1a77bf4b9](https://user-images.githubusercontent.com/60055417/84569403-3ce2a080-adc1-11ea-9301-55928c0b4cc3.jpg)
 
 # 今後実装していきたい機能
+- SSL（https）通信化
 - いいねした投稿一覧の作成
 - コメント、いいね、メッセージの通知機能
 - メッセージ、コメント送信機能の非同期通信化、自動スクロール
