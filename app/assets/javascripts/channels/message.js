@@ -34,8 +34,12 @@ $(function(){
       $('.main-chat__messages').append(html);
       $('.main-chat__messages').animate({ scrollTop: $('.main-chat__messages')[0].scrollHeight});
       $('form')[0].reset();
+      $('.submit-btn').prop('disabled', false);
     })
-    
+    .fail(function(){
+      alert("メッセージの送信に失敗しました");
+      $('.submit-btn').prop('disabled', false);
+    })
 
 
   });
