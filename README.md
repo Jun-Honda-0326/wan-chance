@@ -9,7 +9,7 @@
 Ruby/Ruby on Rails/Haml/SCSS/Javascripit
 
 # インフラ環境等
-- インフラ: AWS（EC２/S3/Route53)
+- インフラ: AWS（EC2/S3/Route53)
 - AppServer: Unicorn
 - WebServer: Nginx
 - デプロイ: Capstranoによる自動デプロイ
@@ -23,7 +23,7 @@ Ruby/Ruby on Rails/Haml/SCSS/Javascripit
 - タグ付け機能
 - いいね機能（非同期通信）
 - コメント機能（非同期通信）
-- ユーザー同士のメッセージ機能
+- ユーザー同士のメッセージ機能(非同期通信)
 - ページネーション機能(kaminari)
 - 管理者機能（rails_admin)
 - 単体テスト
@@ -51,7 +51,7 @@ Ruby/Ruby on Rails/Haml/SCSS/Javascripit
 - SSL（https）通信化
 - いいねした投稿一覧の作成
 - コメント、いいね、メッセージの通知機能
-- ~~メッセージ、コメント送信機能の非同期通信化、自動スクロール~~ 6月26日実装完了
+- ~~メッセージ、コメント送信機能の非同期通信化、自動スクロール~~　6月26日実装完了
 - タグのキーワード検索
 - 管理者として新規登録ができる
 - N+1問題の解消
