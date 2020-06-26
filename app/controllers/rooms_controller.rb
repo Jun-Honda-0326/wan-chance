@@ -22,7 +22,7 @@ class RoomsController < ApplicationController
     @user = User.find(params[:id])
     @room = Room.find(params[:id])
     if Entry.where(user_id: current_user.id,room_id: @room.id).present? #現在ログインしているユーザーのidとそれに紐づくメッセージがあれば
-      @messages = @room.messages.order("created_at DESC") #roomに紐づいたメッセージをメッセージインスタンスに格納
+      @messages = @room.messages.order("created_at ASC") #roomに紐づいたメッセージをメッセージインスタンスに格納
       @message = Message.new #新しくメッセージを作成する場合
       @entries = @room.entries #ユーザー情報を表示させるため
     else

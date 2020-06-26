@@ -4,9 +4,9 @@
       .message
         .user-info
           .user-info__name
-            = link_to message.user.name, "/users/#{message.user.id}" 
+            = message.user.name 
           .user-info__time
-            = message.created_at.strftime("%Y-%m-%d %H:%M")
+            = message.created_at.strftime("%Y-%m-%d %a  %H:%M")
         .message__text
           = message.message
     

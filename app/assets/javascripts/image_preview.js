@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function () {
+$(document).on('click', function () {
   $(function () {
     // 画像をプレビュー表示させる.prev-contentを作成
     function buildHTML(image) {
