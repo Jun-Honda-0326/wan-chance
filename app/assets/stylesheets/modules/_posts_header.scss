@@ -1,7 +1,6 @@
 .header{
   width: 100vw;
   height: 65px;
-  color: #333333;
   background-color:white;
   letter-spacing: 0.12rem;
   display: flex;
@@ -14,14 +13,18 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   a{
-    color: #666;
+    color: #FF00ff;
   }
+ 
   &__logo{
     height: 65px;
     line-height: 65px;
     margin-left: 100px;
     font-size: 40px;
     font-weight: bold;
+    a {
+      color:#FF00FF;
+    }
   }
   &__user-nav{
     display: flex;
@@ -29,16 +32,12 @@
     margin-right: 25px;
     width: 600x;
     line-height: 65px;
-    p.name{
-      height: 65px;
-      font-size: 20px;
-    }
   }
     }
   ul{
     display: flex;
     height: 65px;
-    font-size: 15px;
+    font-size: px;
     li{
       margin-right: 10px;
       line-height: 65px;
