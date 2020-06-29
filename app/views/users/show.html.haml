@@ -1,18 +1,17 @@
 .contents
   .show-user<>
-    = @name 
-    さんのページ
+    = "#{@name}さんの投稿一覧"
   .send-dm
     -if user_signed_in?
       - unless @user.id == current_user.id #現在ログインしているユーザーではない
         - if @isRoom == true #既にroomがある時
           .user-show-room 
-            = link_to @name+'さんへダイレクトメッセージを送る', room_path(@roomId), class: 'btn' #既に作成されているroomへ移動
+            = link_to @name+'さんへダイレクトメッセージを送る', room_path(@roomId) #既に作成されているroomへ移動
         - else #roomがまだ作成されていない時
           = form_for @room do |f|
             = fields_for @entry do |e|
               = e.hidden_field :user_id, value: @user.id
-            = f.submit @name+"さんにダイレクトメッセージ送る", class: 'btn'
+            = f.submit "#{@name}さんへダイレクトメッセージ送る", class: "user-show-room"
           
   - @posts.each do |post|
     .content

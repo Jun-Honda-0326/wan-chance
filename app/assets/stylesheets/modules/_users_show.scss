@@ -1,11 +1,4 @@
-@mixin btn() {
-  width: 380px;
-  height: 50px;
-  background-color:lightskyblue;
-  margin-top: 15px;
-  cursor: pointer;
-  border-radius: 5px;  
-}
+
 
 .contents{
   .text-box{
@@ -24,14 +17,17 @@
     color:black;
   }
   .user-show-room{
-      @include btn();
+      border: solid 1px;
+      width: 380px;
+      height: 50px;
+      background-color:#fff;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius:4px;  
       text-align: center;
       line-height: 50px;
-    .btn{
-      @include btn();
-    }
   }
-  
+  .user-show-room:hover{
+    background-color: lightskyblue;
+  }
 }
-
-
