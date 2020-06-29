@@ -20,20 +20,24 @@
 
   #comment_text{
     width: 450px;
-    height: 60px;
+    height: 55px;
+    line-height: 55px;
     border: 1px solid;
     border-radius: 4px;
     color: black;
   }
   .btn{
-    width: 400px;
+    width: 450px;
     height: 50px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 1px solid lightskyblue;
+    margin: 20px 0;
     background-color:lightskyblue;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid;
     color: black;
+  }
+  .btn:hover{
+    background-color: #fff;
   }
   .comments{
     margin:20px;

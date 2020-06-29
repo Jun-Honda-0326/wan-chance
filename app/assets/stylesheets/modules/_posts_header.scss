@@ -26,7 +26,7 @@
   &__user-nav{
     display: flex;
     align-items: center;
-    margin-right: 50px;
+    margin-right: 25px;
     width: 600x;
     line-height: 65px;
     p.name{
@@ -37,14 +37,15 @@
     }
   ul{
     display: flex;
-    height: 50px;
-    font-size: 20px;
+    height: 65px;
+    font-size: 15px;
     li{
       margin-right: 10px;
-      line-height: 50px;
-      border-radius: 4px;
-      border: 2.5px solid lightskyblue;
+      line-height: 65px;
       padding: 0 10px;
       text-align: center;
+      :hover{
+        text-decoration: underline;
+      }
   }
 }

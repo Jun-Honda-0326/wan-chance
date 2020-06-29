@@ -34,13 +34,17 @@
   }
   .post-submit{
     width: 500px;
-    padding: 20px;
-    background-color: lightskyblue;
+    height: 50px;
+    line-height: 50px;
     cursor: pointer;
-    border-radius: 10px;
-    border-style:none; 
+    border: solid 1px;
+    border-radius: 4px;
     color: black;
     font-size: 18px;
-    margin:25px 0 25px 0 ;
+    margin:25px 0 25px 0 
+
+  }
+  .post-submit:hover{
+    background-color: lightskyblue;
   }
 }

@@ -15,8 +15,10 @@
       .header__user-nav
         - if user_signed_in?
           %p.name
-            = link_to 'マイページ',  "/users/#{current_user.id}" 
+            
           %ul
+            %li
+              = link_to 'マイページ',  "/users/#{current_user.id}" 
             %li
               = link_to 'DM一覧', rooms_path
             %li
