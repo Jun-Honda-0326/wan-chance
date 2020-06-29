@@ -6,7 +6,6 @@
   flex-direction: column;
   position: relative;
   
-
   .text-box{
     width: 500px;
     height: 100px;
@@ -24,11 +23,15 @@
   .image__form{
     margin-top: 25px;
     img{
+      width: 498px;
+      height: 498px;
+    }
+    .prev-contents{
       width: 500px;
       height: 500px;
-    }
-    .hidden_file{
-      margin-right: 140px;
+      border: 1px solid;
+      background-color: #fff;
+      margin-bottom: 15px;
     }
 
   }
