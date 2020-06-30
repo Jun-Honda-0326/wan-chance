@@ -16,7 +16,7 @@
   .tag-box{
     width: 500px;
     height: 50px;
-    margin-top: 25px;
+    margin-top: 45px;
     border: 1.3px solid;
     border-radius: 3px;
   }
@@ -33,7 +33,7 @@
       background-color: #fff;
       margin-bottom: 15px;
     }
-
+   
   }
   .post-submit{
     width: 500px;
@@ -44,13 +44,24 @@
     border-radius: 4px;
     color: black;
     font-size: 18px;
-    margin:25px 0 25px 0 
+    margin:25px 0 25px 0;
+    background-color: lightskyblue; 
 
   }
   .post-submit:hover{
-    background-color: lightskyblue;
+    background-color: #fff;
   }
 }
-.hidden_file{
-  display: none;
+.remove{
+  margin-top:45px;
+  border:solid 1px;
+  width: 125px;
+  height:25px;
+  text-align: center;
+  border-radius: 4px;
+  background-color:lightgray;
+  line-height: 25px;
+}
+.remove:hover{
+  background-color:#dcdcdc;
 }

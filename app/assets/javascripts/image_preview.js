@@ -6,7 +6,7 @@ $(document).on('click', function () {
         `
         <div class="prev-content">
           <img src="${image}", alt="preview" class="prev-image">
-          <div class="remove">削除する</div>
+          <div class="remove">変更する</div>
         </div>
         `
       return html;

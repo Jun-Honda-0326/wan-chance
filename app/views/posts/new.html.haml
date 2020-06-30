@@ -5,12 +5,12 @@
     = form_for @post do |f|
       = f.text_area :text, class: 'text-box', placeholder: 'メッセージを入力してください'
       .image__form
-        = f.label :image, class: "image" do
+        = f.label :image do
           .prev-contents
             - if @post.image.present?
               .prev-content
                 = image_tag @post.image.url, alt: "preview", class: "prev-image"
-          = f.file_field :image, class: 'hidden_file'
+          = f.file_field :image, class: 'hidden_file' 
       = f.text_field :tagname,class: 'tag-box', placeholder: 'タグは / で区切ってください ex）かわいい/愛犬', value: @tag_list
       = f.submit '投稿する', class: 'post-submit'
       
