@@ -6,12 +6,12 @@ $(document).on('click', function () {
         `
         <div class="prev-content">
           <img src="${image}", alt="preview" class="prev-image">
+          <div class="remove">削除する</div>
         </div>
         `
       return html;
     }
     $(document).on('change', '.hidden_file', function () {
-      console.log("ok");
       var file = this.files[0];
       var reader = new FileReader();
       reader.readAsDataURL(file);
@@ -24,6 +24,10 @@ $(document).on('click', function () {
           $('.prev-content .prev-image').attr({ src: image });
         }
       }
+    });
+
+    $(document).on('click', '.remove', function(){
+      $('.prev-content').remove();
     });
   });
 });
